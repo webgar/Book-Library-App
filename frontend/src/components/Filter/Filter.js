@@ -23,7 +23,7 @@ const Filter = () => {
 	const handleResetFilters = () => {
 		dispatch(resetFilters())
 	}
-	const handleonlyFavoriteFilterChange = () => {
+	const handleOnlyFavoriteFilterChange = () => {
 		dispatch(setOnlyFavoriteFilter())
 	}
 	return (
@@ -50,7 +50,7 @@ const Filter = () => {
 						<input
 							type='checkbox'
 							checked={onlyFavoriteFilter}
-							onChange={handleonlyFavoriteFilterChange}
+							onChange={handleOnlyFavoriteFilterChange}
 						/>
 						Only Favorite
 					</label>
