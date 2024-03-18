@@ -82,6 +82,8 @@ export const thunkFunction = async (dispatch, getState) => {
 		console.log('Error fetching random book', error)
 	}
 }
+
+
 export const selectBooks = state => state.books
 export const selectIsLoadingViaAPI = state => state.isLoadingViaAPI
 
