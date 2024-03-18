@@ -18,21 +18,7 @@ export const fetchBook = createAsyncThunk(
 		}
 	}
 )
-// export const fetchBook = createAsyncThunk(
-// 	'books/fetchBook',
-// 	async (url, thunkAPI) => {
-// 		try {
-// 			const res = await axios.get(url)
-// 			return res.data
-// 		} catch (error) {
-// 			thunkAPI.dispatch(setError(error.message))
-// 			// OPTION 1
-// 			return thunkAPI.rejectWithValue(error)
-// 			// // OPTION 2
-// 			// throw error
-// 		}
-// 	}
-// )
+
 
 const booksSlice = createSlice({
 	name: 'books',
@@ -52,6 +38,7 @@ const booksSlice = createSlice({
 			})
 		},
 	},
+
 	extraReducers: builder => {
 		builder.addCase(fetchBook.fulfilled, (state, action) => {
 			if (action.payload.title && action.payload.author) {
